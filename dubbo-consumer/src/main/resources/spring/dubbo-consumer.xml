@@ -6,13 +6,12 @@
         http://code.alibabatech.com/schema/dubbo
         http://code.alibabatech.com/schema/dubbo/dubbo.xsd"
 	default-lazy-init="false">
-	<dubbo:application name="provider" />
+	<dubbo:application name="consumer" />
 
 	<!-- zookeeper注册中心 -->
 	<dubbo:registry address="zookeeper://127.0.0.1:2181"
 		check="false"></dubbo:registry>
-	<!-- 要暴露的服务接口 -->
-	<dubbo:service interface="com.dongwt.dubbo.service.DemoService"
-		ref="demoService" />
+	<!-- 生成远程服务代理，可以和本地bean一样使用demoService -->
+    <dubbo:reference id="demoService" interface="com.dongwt.dubbo.service.DemoService" />
 
 </beans>
