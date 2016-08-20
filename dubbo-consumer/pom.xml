@@ -12,9 +12,9 @@
 	<artifactId>dubbo-consumer</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
-	<name>dubbo-consumer Maven Webapp</name>
+	<name>dubbo-consumer</name>
 	<url>http://maven.apache.org</url>
-	
+
 	<dependencies>
 		<dependency>
 			<groupId>com.dongwt.dubbo</groupId>
