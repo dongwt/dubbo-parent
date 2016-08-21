@@ -9,9 +9,12 @@
         http://code.alibabatech.com/schema/dubbo
         http://code.alibabatech.com/schema/dubbo/dubbo.xsd"
 	default-lazy-init="false">
+	
+	<context:property-placeholder location="classpath:config.properties" />
+
 	<dubbo:application name="provider" />
 	<!-- zookeeper注册中心 -->
-	<dubbo:registry address="zookeeper://127.0.0.1:2181"
+	<dubbo:registry address="${dubbo.registry.address}"
 		check="false"></dubbo:registry>
 	<!-- 要暴露的服务接口 -->
 	<dubbo:service interface="com.dongwt.dubbo.service.api.ProviderService"
