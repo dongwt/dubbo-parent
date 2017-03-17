@@ -19,6 +19,6 @@
 		check="false"></dubbo:registry>
 	<!-- 生成远程服务代理，可以和本地bean一样使用providerService -->
 	<dubbo:reference id="providerService"
-		interface="com.dongwt.dubbo.service.api.ProviderService" />
+		interface="com.dongwt.dubbo.service.ProviderService" />
 
 </beans>

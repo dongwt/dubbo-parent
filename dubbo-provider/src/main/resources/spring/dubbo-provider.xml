@@ -17,7 +17,7 @@
 	<dubbo:registry address="${dubbo.registry.address}"
 		check="false"></dubbo:registry>
 	<!-- 要暴露的服务接口 -->
-	<dubbo:service interface="com.dongwt.dubbo.service.api.ProviderService"
+	<dubbo:service interface="com.dongwt.dubbo.service.ProviderService"
 		ref="providerService" />
 
 </beans>

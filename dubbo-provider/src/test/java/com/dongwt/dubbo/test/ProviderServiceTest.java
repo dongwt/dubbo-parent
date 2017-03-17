@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.dongwt.dubbo.service.api.ProviderService;
+import com.dongwt.dubbo.service.ProviderService;
 
 @RunWith(value = SpringJUnit4ClassRunner.class)
 @ContextConfiguration(value = "classpath:/spring/spring-mvc.xml")
@@ -20,6 +20,15 @@ public class ProviderServiceTest {
 		try {
 			String result = providerService.sayHello("tom");
 			System.out.println(result);
+			Thread.sleep(1000 * 60 * 60);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
+
+	@Test
+	public void register(){
+		try {
 			Thread.sleep(1000 * 60 * 60);
 		} catch (InterruptedException e) {
 			e.printStackTrace();

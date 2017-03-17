@@ -1,5 +1,7 @@
 package com.dongwt.dubbo.test;
 
+import com.dongwt.dubbo.api.req.User;
+import com.dongwt.dubbo.enums.SexEnum;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +21,21 @@ public class ConsumerServiceTest {
 	public void executeMethod(){
 		String result = consumerService.executeMethod("tom");
 		System.out.println(result);
-	};
+	}
+
+	@Test
+	public  void register(){
+		User user = new User();
+		user.setName("tom");
+		user.setAge(18);
+		user.setSex(SexEnum.MAN);
+		consumerService.register(user);
+
+		try {
+			Thread.sleep(1000 * 60 * 60);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
 
 }
